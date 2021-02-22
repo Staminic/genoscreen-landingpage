@@ -36,6 +36,7 @@
 
 	<positions>
 		<position>navbar</position>
+		<position>navbar-landingpage</position>
 		<position>breadcrumbs</position>
 		<position>sidebar</position>
 		<position>debug</position>

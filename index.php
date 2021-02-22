@@ -10,23 +10,34 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 </head>
 
 <body class="<?php echo $active->alias . ' ' . $pageclass; ?>">
+  <nav class="navbar navbar-expand-md">
+    <a class="navbar-brand" href="index.php/genoscreen-services">
+      <img src="<?php echo $tpath; ?>/img/genoscreen-services-logo.svg" alt="Genoscreen Services" />
+    </a>
+    
+    <button type="button" class="navbar-toggle offcanvas-toggle" data-toggle="offcanvas" data-target="#navbar-modules">
+      <i class="fas fa-bars"></i>
+    </button>
 
-    <!--
-        SHOW ME YOUR AWESOME CODE
-    -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <jdoc:include type="component" />
-                <i class="fas fa-user"></i>
-                <i class="far fa-user"></i>
-                <i class="fab fa-github-square"></i>
-            </div>
+    <div class="navbar-offcanvas navbar-offcanvas-touch" id="navbar-modules" style="display: flex;">
+      <div>
+        <div class="navarea second">
+          <jdoc:include type="modules" name="second-navbar" />
         </div>
+        <div class="navarea main">
+          <jdoc:include type="modules" name="navbar" />
+        </div>
+      </div>
     </div>
+  </nav>
 
-    <jdoc:include type="modules" name="debug" />
-    <script src="templates/frontend/build/app.js"></script>
+  <div class="container">
+      <jdoc:include type="component" />
+  </div>
+
+  <jdoc:include type="modules" name="debug" />
+  <!-- <script src="<?php echo $tpath; ?>/build/app.js"></script> -->
+  <script src="<?php echo $tpath; ?>/js/bootstrap.offcanvas.min.js"></script>
 </body>
 
 </html>

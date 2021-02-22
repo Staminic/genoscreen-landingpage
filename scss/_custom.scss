@@ -1,3 +1,123 @@
-// TEMPLATE STYLES
+@import "partials/menu";
 
-// custom code
+.landingpage {
+  .item-page {
+    ul {
+      padding-left: $spacer;
+    }
+
+    li {
+      margin-bottom: $spacer;
+    }
+  }
+
+  .btn-outline-white:hover {
+    color: $black !important;
+  }
+
+  .full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  nav {
+    .navbar-brand {
+      img {
+        height: 75px;
+      }
+    }
+  }
+
+  .main-title {
+    margin-bottom: $spacer * 7;
+    padding-top: $spacer * 3;
+    padding-bottom: $spacer * 3;
+    background-color: $green;
+    color: $white;
+    font-family: $font-family-condensed;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .card {
+    margin-bottom: $grid-gutter-width;
+  }
+
+  .sticky-top {
+    top: 5px;
+    border: none;
+
+    .card-body {
+      border-radius: $card-border-radius;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      margin-top: -($spacer * 10);
+      margin-bottom: $spacer * 2;
+    }
+  }
+
+  .card-overlay {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+
+    .card-body {
+      visibility: hidden;
+      opacity: 0;
+      // transition: opacity 0.2s, visibility 0.2s;
+    }
+
+    &:hover {
+      .card-body {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      margin: 0;
+      padding: $card-spacer-x;
+    }
+
+    &.bggreen {
+      .card-body {
+        background: rgba(0, 166, 73, 0.8);
+      }
+
+      &:hover {
+        h2 {
+          background: rgba(0, 166, 73, 0.8);
+        }
+      }
+    }
+
+    &.bgblue {
+      .card-body {
+        background: rgba(0, 53, 118, 0.8);
+      }
+
+      &:hover {
+        h2 {
+          background: rgba(0, 53, 118, 0.8);
+        }
+      }
+    }
+
+    .card-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.navbar-nav {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  > li {
+    position: relative;
+    margin: 0 3px;
+
+    a {
+      padding-top: 2px;
+      padding-right: 15px;
+      padding-bottom: 2px;
+      padding-left: 15px;
+      color: $black;
+    }
+  }
+}
+
+.dropdown-menu {
+  > li {
+    > a {
+      display: block;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      white-space: normal;
+    }
+
+    &.parent {
+      position: relative;
+
+      > a::after {
+        content: "\f0da";
+        float: right;
+        margin-right: -10px;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: $primary;
+      }
+
+      &.parent {
+        &:hover {
+          .dropdown-menu {
+            display: block;
+            top: 0;
+            left: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  #navbar-modules {
+    background-color: $green;
+  }
+
+  .navbar-offcanvas > div {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+}

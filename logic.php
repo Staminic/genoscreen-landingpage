@@ -12,13 +12,24 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 // generator tag
 $this->setGenerator(null);
 
+// responsive meta tag (recommended in Bootstrap 4 doc)
+$doc->setMetadata('viewport', 'width=device-width, initial-scale=1, shrink-to-fit=no');
+
+// google fonts
+JDocumentHTML::addHeadLink('https://fonts.gstatic.com', 'preconnect', 'rel');
+$doc->addStyleSheet('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&family=Roboto:wght@300;400;700&display=swap');
+
+JHtml::_('jquery.framework');
+$doc->addScript('https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', '', array('integrity' => 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN', 'crossorigin' => 'anonymous', 'defer' => 'defer'));
+$doc->addScript($tpath . '/js/bootstrap.min.js', '', array('defer' => 'defer'));
+
 // unset
-unset($doc->_scripts[$this->baseurl .'/media/jui/js/jquery.min.js']);
+// unset($doc->_scripts[$this->baseurl .'/media/jui/js/jquery.min.js']);
 unset($doc->_scripts[$this->baseurl .'/media/jui/js/jquery-noconflict.js']);
 unset($doc->_scripts[$this->baseurl .'/media/jui/js/jquery-migrate.min.js']);
 unset($doc->_scripts[$this->baseurl .'/media/jui/js/bootstrap.min.js']);
 unset($doc->_scripts[$this->baseurl .'/media/system/js/caption.js']);
-unset($doc->_scripts[$this->baseurl .'/media/system/js/core.js']);
+// unset($doc->_scripts[$this->baseurl .'/media/system/js/core.js']);
 unset($doc->_scripts[$this->baseurl .'/media/system/js/tabs-state.js']);
 unset($doc->_scripts[$this->baseurl .'/media/system/js/validate.js']);
 
@@ -34,3 +45,5 @@ if (isset($doc->_script['text/javascript']))
 
 // css
 $doc->addStyleSheet($tpath.'/build/main.css');
+$doc->addStyleSheet($tpath.'/build/bootstrap.offcanvas.min.css');
+
