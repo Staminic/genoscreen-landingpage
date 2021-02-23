@@ -15,7 +15,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
       <img src="<?php echo $tpath; ?>/img/genoscreen-services-logo.svg" alt="Genoscreen Services" />
     </a>
     
-    <button type="button" class="navbar-toggle offcanvas-toggle" data-toggle="offcanvas" data-target="#navbar-modules">
+    <button type="button" class="navbar-toggler offcanvas-toggle" data-toggle="offcanvas" data-target="#navbar-modules">
       <i class="fas fa-bars"></i>
     </button>
 

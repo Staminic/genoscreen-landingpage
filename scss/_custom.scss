@@ -1,6 +1,18 @@
 @import "partials/menu";
 
 .landingpage {
+  font-family: $font-family-condensed;
+
+  &.landing-page {
+    overflow-x: hidden;
+  }
+
+  h3,
+  .h3 {
+    color: $primary;
+    font-weight: 700;
+  }
+
   .item-page {
     ul {
       padding-left: $spacer;
@@ -24,18 +36,12 @@
     margin-right: -50vw;
   }
 
-  nav {
-    .navbar-brand {
-      img {
-        height: 75px;
-      }
-    }
-  }
-
   .main-title {
     margin-bottom: $spacer * 7;
     padding-top: $spacer * 3;
+    padding-right: $spacer;
     padding-bottom: $spacer * 3;
+    paddin-left: $spacer;
     background-color: $green;
     color: $white;
     font-family: $font-family-condensed;
@@ -43,13 +49,24 @@
     text-transform: uppercase;
   }
 
-  .card {
-    margin-bottom: $grid-gutter-width;
+  .solutions {
+    [class*="col-"] {
+      margin-bottom: $grid-gutter-width;
+
+      .card {
+        height: 100%;
+      }
+    }
   }
 
   .sticky-top {
     top: 5px;
     border: none;
+
+    .card-title {
+      color: $white;
+      font-weight: 400;
+    }
 
     .card-body {
       border-radius: $card-border-radius;
@@ -118,6 +135,17 @@
       right: 0;
       bottom: 0;
       left: 0;
+    }
+  }
+
+  .footer {
+    margin-top: $spacer * 2;
+    padding: $spacer * 2;
+    background-color: $primary;
+    text-align: center;
+
+    img {
+      height: 75px;
     }
   }
 }
