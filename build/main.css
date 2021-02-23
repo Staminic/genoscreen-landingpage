@@ -15405,7 +15405,7 @@ nav .navbar-brand img {
   margin-right: -50vw;
 }
 .landingpage .main-title {
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
   padding-top: 3rem;
   padding-right: 1rem;
   padding-bottom: 3rem;
@@ -15422,6 +15422,9 @@ nav .navbar-brand img {
 .landingpage .solutions [class*=col-] .card {
   height: 100%;
 }
+.landingpage .col-sticky {
+  margin-bottom: 30px;
+}
 .landingpage .sticky-top {
   top: 5px;
   border: none;
@@ -15436,7 +15439,6 @@ nav .navbar-brand img {
 .landingpage .sticky-top img {
   display: block;
   margin: 0 auto;
-  margin-top: -10rem;
   margin-bottom: 2rem;
 }
 .landingpage .card-overlay {
